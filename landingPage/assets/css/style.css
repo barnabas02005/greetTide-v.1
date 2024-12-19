@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@710&display=swap"); 
+* {
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+}
+
+body {
+background-color: rgb(255, 255, 255);
+min-height: 100vh;
+width: 100%;
+display: flex;
+height: 100vh;
+font-family: poppins;
+}
+
+.wrapper {
+background-color: rgb(255, 255, 255);
+height: 100%;
+width: 100%;
+}
+
+section {
+height: 90vh;
+width: 100%;
+background-color: rgb(0, 0, 0);
+}
+
+#one {
+background-color: rgb(255, 255, 255);
+}
+
+#one .up {
+height: 15%;
+width: 100%;
+}
+
+.up .menu {
+background: white;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.menu .logo {
+height: 100%;
+width: 40%;
+padding: 0px 34px;
+}
+
+.logo .img_source {
+height: 100%;
+width: 14%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.img_source img {
+height: auto;
+width: 100%;
+inset: 0px;
+}
+
+.menu .menu-link {
+height: 100%;
+width: 60%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu-link ul {
+display: flex;
+justify-content: space-evenly;
+width: 70%;
+height: 50%;
+align-items: center;
+}
+
+.menu-link ul li {
+list-style: none;
+font-size: 1.4vw;
+font-family: poppins;
+font-weight: 500;
+color: grey;
+cursor: pointer;
+}
+
+#one .down {
+height: calc(85%);
+width: 100%;
+display: flex;
+}
+
+.down .left_side_text_website_description {
+height: 100%;
+width: 50%;
+}
+
+.left_side_text_website_description .main_text {
+height: auto;
+width: 100%;
+padding: 75px 33px 0px;
+}
+
+.main_text h3 {
+font-size: 4.4vw;
+font-weight: 900;
+letter-spacing: 1.2px;
+word-spacing: 1px;
+color:crimson;
+background: linear-gradient(132deg, rgb(250, 170, 0) 0.00%, rgb(237, 19, 19) 50.00%, rgb(213, 74, 255) 100.00%);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+/* text-shadow: grey 6px 0px, white 3px 0px, orange 3px 0px; */
+}
+
+.left_side_text_website_description .sub_text {
+      height: auto;
+      /* background: red; */
+      padding: 20px 40px;
+}
+
+.sub_text h4 {
+      letter-spacing: 1.3px;
+      word-spacing: 0.4px;
+      color: dimgrey;
+      font-size: 1.4vw;
+      font-weight: 600;
+}
+
+.down .right_side_media_display_mockups {
+      height: 100%;
+      width: 50%;
+      /* background: red; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.right_side_media_display_mockups .media_spot {
+      height: 90%;
+      width: 100%;
+      /* background: green; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+}
+
+.media_spot .round_circle {
+      height: 400px;
+      width: 400px;
+      background: rgba(239 239 239);
+      border-radius: 50%;
+      position: relative;
+}
+
+.round_circle img {
+      position: absolute;
+}
+
+.media_spot .img_rotate {
+      height: 100%;
+      width: auto;
+      /* background: red; */
+      position: absolute;
+      transform: rotateZ(12deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.img_rotate img {
+      height: 100%;
+      width: 100%;
+}
+
+.left_side_text_website_description .get_started {
+      height: auto;
+      width: 100%;
+      display: flex;
+      padding: 0px 38px;
+}
+
+.get_started .gs_btn {
+      height: auto;
+      width: 35%;
+      /* background: red; */
+      border-radius: 53px;
+      border: none;
+      outline: none;
+      background: #000;
+      padding: 2px;
+      cursor: pointer;
+}
+
+.gs_btn button {
+      height: auto;
+      padding: 19px 46px;
+      width: 100%;
+      border-radius: inherit;
+      border: none;
+      outline: none;
+      color: lightgrey;
+      font-size: 1.3vw;
+      font-weight: 600;
+      background: white;
+      background: inherit;
+      cursor: pointer;
+}
+
+#two {
+      background-color: rgb(239 239 239);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+#two .left {
+      height: 100%;
+      width: 25%;
+      /* background: green; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+}
+
+#two span {
+      border-right: 2px solid lightgrey;
+      width: 2px;
+      height: 83%;
+      position: relative;
+      display: inline-block;
+}
+
+#two .right {
+      height: 100%;
+      width: calc(100% - 35%);
+      /* background: red; */
+}
+
+#two .left .svg_icon {
+      width: 50%;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, .50);
+      height: auto;
+      padding: 26px;
+}
+
+#two .left .svg_icon svg {
+      stroke: grey;
+      height: 100%;
+      width: 100%;
+      fill: none;
+      stroke-width: 1px;
+      stroke-miterlimit: 10;
+}
+
+#two .left .section_title {
+      width: 100%;
+      height: auto;
+       /* background-color: red; */
+       display: flex;
+       justify-content: center;
+}
+
+.section_title p {
+      font-size: 2.3vw;
+      font-weight: 700;
+      color: grey;
+}
+
+#two .left .sub_writing {
+      /* background: yellow; */
+      padding: 4px 29px;
+}
+
+.sub_writing p {
+      color: #333;
+      font-weight: 600;
+      text-align: center;
+}
+
+@media (max-width: 768px)
+{
+      .down .right_side_media_display_mockups {
+            display: none;
+      }
+      .logo .img_source {
+            height: 100%;
+            width: 80%;
+      }
+      .menu .menu-link {
+            display: none;
+      }
+
+      .down .left_side_text_website_description {
+            width: 100%;
+            height: 80%;
+      }
+
+      .left_side_text_website_description .main_text {
+            padding: 75px 24px 0px;
+      }
+
+      .main_text h3 {
+            font-size: 9.4vw;
+      }
+
+      .left_side_text_website_description .sub_text {
+            padding: 20px 20px;
+      }
+
+      .sub_text h4 {
+            font-size: 4.4vw;
+            font-weight: 400;
+      }
+
+      .left_side_text_website_description .get_started {
+            padding: 0px 19px;
+      }
+
+      .get_started .gs_btn {
+            width: 64%;
+            border-radius: 44px;
+      }
+      
+      .gs_btn button {
+            font-size: 4.3vw;
+      }
+}

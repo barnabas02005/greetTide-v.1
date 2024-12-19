@@ -1,0 +1,44 @@
+<!--I LOVE MY BELOVED FATHER -- YAHWEH -->
+<!DOCTYPE html>
+<html lang="us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #myElement {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+  <title>Long Press Example</title>
+</head>
+<body>
+  <div id="myElement" onmousedown="startPress(event)" onmouseup="endPress()" ontouchstart="startPress(event)" ontouchend="endPress()">Long Press me!</div>
+  <script defer>
+    alert("JESUS IS MY LORD FOREVER AND EVER, I STAY WITH HIM");
+    document.addEventListener('DOMContentLoaded', async () => {
+    var pressTimer;
+    var elementMy = document.getElementById('myElement');
+    function startPress(event) {
+      event.preventDefault();
+
+      pressTimer = setTimeout(function () {
+       elementMy.style.backgroundColor = "orangered";
+       elementMy.style.transition = "all 0.8s ease-in-out";
+      }, 1000); 
+    }
+
+    function endPress() {
+      clearTimeout(pressTimer);
+      elementMy.style.backgroundColor = "blue";
+    }
+  });
+  </script>
+</body>
+</html>

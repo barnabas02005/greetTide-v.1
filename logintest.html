@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .error {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>User Authentication</h1>
+    </header>
+    <form id="signup-form">
+        <h2>Sign Up</h2>
+        <div class="error" id="signup-error"></div>
+        <input type="text" id="signup-username" placeholder="Username" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <input type="submit" value="Sign Up">
+    </form>
+    <form id="login-form">
+        <h2>Login</h2>
+        <div class="error" id="login-error"></div>
+        <input type="text" id="login-username" placeholder="Username" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        // Simulated user data
+        const users = [
+            { username: "user1", password: "password1" },
+            { username: "user2", password: "password2" }
+        ];
+
+        // Sign up form
+        const signupForm = document.getElementById("signup-form");
+        signupForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const username = document.getElementById("signup-username").value;
+            const password = document.getElementById("signup-password").value;
+
+            // Check if username already exists
+            if (users.some(user => user.username === username)) {
+                document.getElementById("signup-error").innerText = "Username already exists";
+                return;
+            }
+
+            // Store new user in local storage
+            users.push({ username, password });
+            localStorage.setItem("users", JSON.stringify(users));
+            alert("Sign up successful. Please login.");
+            signupForm.reset();
+        });
+
+        // Login form
+        const loginForm = document.getElementById("login-form");
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const username = document.getElementById("login-username").value;
+            const password = document.getElementById("login-password").value;
+
+            // Find user in local storage
+            const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+            const user = storedUsers.find(user => user.username === username && user.password === password);
+            if (!user) {
+                document.getElementById("login-error").innerText = "Invalid username or password";
+                return;
+            }
+
+            alert("Login successful");
+            loginForm.reset();
+        });
+    </script>
+</body>
+</html>

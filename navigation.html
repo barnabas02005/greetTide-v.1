@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Source Code Viewer</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  textarea {
+    width: 100%;
+    height: 500px;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Website Source Code Viewer</h1>
+  <button onclick="fetchSourceCode()">Fetch Source Code</button>
+  <textarea id="sourceCode" readonly></textarea>
+</div>
+
+<script>
+function fetchSourceCode() {
+  var url = prompt("Enter the URL of the website to fetch source code from:");
+  if (!url) return; // Exit if URL is empty or canceled
+
+  fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('sourceCode').value = data;
+    })
+    .catch(error => {
+      console.error('There was a problem fetching the source code:', error);
+    });
+}
+</script>
+
+</body>
+</html>

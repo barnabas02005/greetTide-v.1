@@ -1,0 +1,113 @@
+	@import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins:wght@400;500;600&display=swap');
+
+	.splash_screen {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			background-color: #FFF;
+			height: 100vh;
+			width: 100%;
+	}
+
+	.splash_screen .img_splash_screen {
+			height: 100%;
+			/* background: red; */
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+	}
+
+	.img_splash_screen .img_splash {
+			height: auto;
+			width: 100px;
+			position: relative;
+			animation: iconanime 1.4s cubic-bezier(.4,0,.6,1) forwards;
+	}
+
+	@keyframes iconanime {
+			0% {
+				transform: translateY(140px);
+				opacity: 0;
+			}
+			50% {
+				transform: translateY(10px) scale(1.05);
+				opacity: 0.5;
+			}
+			100% {
+				transform: translateY(0px) scale(1);
+				opacity: 1;
+			}
+	}
+
+
+	.img_splash img {
+			height: 100%;
+			width: 100%;
+			animation: blinkanime 1.6s cubic-bezier(.4,0,.6,1) infinite;
+			animation-delay: 1.4s;
+	}
+	@keyframes blinkanime {
+		20%
+		{
+			transform: scale(1.08);
+			opacity: 0.7;
+		}
+		50% {
+			transform: scale(1.04);
+			opacity: 0.8;
+		}
+		100% {
+			transform: scale(1);
+			opacity: 1;
+		}
+	}
+
+	.splash_screen .text_splash_screen {
+			height: 15%;
+			width: 100%;
+			/* background: green; */
+			display: none;
+			justify-content: center;
+			align-items: start;
+	}
+
+	.text_splash_screen p {
+	height: auto;
+	width: auto;
+	font-size: 9.2vw;
+	font-weight: 900;
+	font-family: cursive,'poppins', cloho, jost;
+	background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	}
+
+	.no-splash {
+		animation: animeout 1.2s cubic-bezier(.4,0,.6,1) forwards;
+	}
+
+	@keyframes animeout {
+		0% {
+			opacity: 0.5;
+		}
+		60% {
+			opacity: 0.01;
+		}
+		100% {
+			transform: scale(10.1);
+			opacity: 0;
+			display: none;
+		}
+	}
+
+
+
+	@media (min-width: 400px)
+	{
+	.text_splash_screen p {
+				font-size: clamp(2rem, 3.5vw, 4rem);
+				font-family: 'poppins';
+	}
+	}

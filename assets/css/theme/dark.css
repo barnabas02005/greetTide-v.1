@@ -1,0 +1,328 @@
+*{
+	color: white;
+}
+body {
+	color: white;
+	background: linear-gradient(-45deg, #111, #333);
+}
+
+iframe {
+	background: white;
+	color: white;
+}
+
+.splash_screen {
+	background: linear-gradient(45deg, #111, #333);
+}
+
+.container_wrapper {
+	/* background: linear-gradient(-45deg, #111, #333); */
+}
+
+.container_wrapper .container_header {
+	/* border-bottom: 1px solid #444; */
+	background: linear-gradient(-45deg, #111, #333);
+}
+
+.container_header .up {
+	border-bottom: 1px solid #333;
+}
+
+.container_header.is-visible {
+	background: linear-gradient(45deg, #222, #333) !important;
+}
+
+.container_header .right .icon {
+	background: #222;
+}
+.container_header .right ul li.more_menu {
+	background-color: #444;
+	border: 1px solid #555;
+}
+
+.CH_right_icon svg {
+	stroke: darkgray;
+}
+
+.noti_count p {
+	color: white;
+}
+
+.container_wrapper .container_body {background: transparent;}
+
+.feed_suggestion {
+	backdrop-filter: blur(40px);
+	background: linear-gradient(-45deg, #222, #333);
+}
+
+.FD_bar ul li {background: linear-gradient(45deg, #444, #333);border: 1px solid #555;}
+
+.FD_bar ul li p {
+	color: white;
+}
+
+.FD_bar ul li.active {
+	background: var(--gradient-color);
+	border: none;
+}
+
+.FD_bar ul li.active p{
+	color: white;
+}
+
+.container_wrapper .container_body .content .post_container {
+	background-color: #222;
+	/* border-top: 1px solid #444; */
+}
+
+.post_container .PC_head {
+	background: linear-gradient(-45deg, #333, #222);
+}
+
+.follow_btn button {
+	background: #444;
+}
+
+.follow_btn button.following_already {
+	background: transparent;
+}
+
+.PC_head_left .member_avatar {
+	background: #222;
+}
+
+.card_name_mem .card_name {
+	/* background: #222; */
+}
+
+.card_name p {
+	color: white;
+}
+
+.card_name_mem .mem_displayname {
+	/* background: #222; */
+}
+
+.mem_displayname p {
+	color: darkgrey;
+}
+.subscribed_txt span {
+	color: #f55674;
+}
+
+.post_container .PC_body {
+	background: linear-gradient(-45deg, #111, #333) !important;
+}
+
+.post_container .PC_footer {
+	background: linear-gradient(180deg, #222, #333);
+}
+
+.PC_footer_left .like_comment {
+	/* background: #222; */
+}
+
+.like_comment .post_actions {
+	background: rgba(255, 255, 255, .06);
+}
+
+.like_comment .post_actions .PA_icon svg {
+	stroke: white;
+}
+
+.like_comment .post_actions .checked svg {
+	stroke: url(#grad);
+	fill: url(#grad);
+}
+
+.PC_footer_right .right_side_divider {
+	border-right: 3px solid #222;
+}
+
+.PC_footer_right .post_actions {
+	/* background: #222; */
+}
+
+.use_design button.buy_design {
+	background: linear-gradient(244deg, rgba(255, 255, 255, .06) 56%, rgb(242, 112, 156) 57%, rgb(255, 148, 114) 104%);
+	/* width: 90%; */
+}
+
+.use_design button.buy_design p {
+	color: white;
+}
+
+.PC_footer_right .post_actions .PA_icon {
+	background: #333;
+}
+
+.PC_footer_right .post_actions .PA_icon svg {
+	stroke: white;
+}
+
+.BT_icon svg {
+	stroke: white;
+}
+
+.BT_icon_text p {
+	color: white;
+}
+
+.PCFD_tags ul li {
+	background: #444;
+}
+.PCFD_tags ul li p {
+	color: white;
+}
+
+/* Comment */
+.commentbsheet.up .comment_title_txt {
+	border-bottom: 1px solid #333;
+}
+.comment_title_txt p {
+	color: #fff;
+}
+.comment_timespan span {
+	color: #eee;
+}
+.right_comment_card .member_txt_details .displayname span {
+	color: lightgrey;
+}
+.comment_body .content .txt_comment {
+	color: #fff;
+}
+
+/* BottomTab */
+.container_bottomtab {
+	background: linear-gradient(45deg, #111, #333);
+	border-top: 2px solid #333;
+}
+
+/*bottomsheet*/
+.go_app_event .gae_bottomsheet {
+	background: linear-gradient(64deg, #323232,#111, #111);
+}
+.overlay_bottomsheet {
+	background: rgba(0, 0, 0, 0.8);
+}
+.gae_bottomsheet .head .gae_H_bar {
+	background-color: #222;
+}
+
+.gae_B_body ul li {
+	background: linear-gradient(64deg, #32323232,#111, #111);
+	border-bottom: 1px solid #222;
+}
+
+.gae_B_body ul li .gae_icon {
+	/* background: #22222222;
+	box-shadow: 0px 3px 30px rgba(8 8 8 / 27%);
+	border: 2px solid #2334; */
+}
+
+.gae_icon .svg svg {
+	stroke: lightgrey;
+}
+.gae_icon .cardvg svg {
+	/* fill: white; */
+}
+
+.gae_icon .live svg g {
+	fill: lightgrey;
+}
+
+.gae_text p {
+	color: lightgrey;
+}
+
+.gae_B_head .gae_B_H_text
+{
+	background: #222;
+}
+
+/* more menu */
+.mm_content {
+  background: linear-gradient(-45deg, #111, #333) !important;
+}
+.mmch_left .mmchl_back_btn {
+  background: #333;
+  border: 1px solid #555;
+}
+.mmchl_back_btn svg {
+  stroke: dimgray;
+}
+.mm_search-box input {
+	background: #333;
+	columns: dimgray;
+}
+.mm_search-box input:focus {border: 1px solid #555;}
+/* shift right placeholder in focus */
+.mm_search-box input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease; color: dimgray}
+.mm_search-box input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease; color: dimgray}
+.mm_search-box input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease; color: dimgray}
+.mm_search-box input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease; color: dimgray}
+.mm_search-box input::placeholder {
+	color: dimgray;
+}
+.mmc_content .mmc_content_head {
+	border-bottom: 1px solid #333;
+}
+.mm_search_icon svg {
+	stroke: dimgray;
+}
+@media(min-width: 600px) {
+	.container_body .content {
+				background: inherit;
+	}
+	.FD_bar ul li {
+				background: #444;
+	}
+}
+@media(min-width: 1200px)
+{
+	.container_bottomtab {
+				border-right: 1px solid #333;
+				border-top: none;
+	}
+	.container_bottomtab ul li:hover {
+				background-color: #222;
+	}
+	.go_app_event {
+				background: #111;
+				border-right: 1px solid #333;
+	}
+	.go_app_event .gae_bottomsheet {
+				background: transparent;
+	}
+}
+
+/* search page */
+.first_sec {
+	background: linear-gradient(-45deg, #111, #333);
+}
+.FSH_first .page_FSHF_title {
+	background: #444;
+}
+.FSH_first .page_FSHF_icon {
+	background: #444;
+}
+.FSH_second .FSHS_icon {
+	background: #444;
+}
+.FSHS_searchBox input {
+	background: #333;
+	border: 1px solid #444;
+}
+
+.FS_body ul li {
+	background: #333;
+}
+.FS_body ul li .ava_display {
+	background: rgba(255, 255, 255, .10);
+}
+.fullname_display_name .name {
+	background: rgba(255, 255, 255, .10);
+}
+.fullname_display_name .display_name {
+	background: rgba(255, 255, 255, .10);
+}

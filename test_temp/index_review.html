@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Page Application</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        /* Style for the modal overlay */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        /* Style for the modal content */
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><div class="page-link" data-page="canva.html">Home</div></li>
+            <li><div class="page-link" data-page="index2.html">About</div></li>
+            <li><div class="page-link" data-page="contact.html">Contact</div></li>
+            <!-- Example of a dynamic link -->
+            <li><div class="custom-link" data-page="user.php?id=35">User Profile</div></li>
+        </ul>
+        
+    </nav>
+
+    
+    <iframe id="content-iframe"></iframe>
+
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pageLinks = document.querySelectorAll('.page-link');
+            const iframe = document.getElementById('content-iframe');
+            const modalOverlay = document.getElementById('modalOverlay');
+            const closeModalButton = document.getElementById('closeModalButton');
+
+            // Function to load a page into the iframe
+            function loadPage(destination) {
+                // Change the source URL to about:blank to force a reload
+                iframe.src = 'about:blank';
+
+                // Load the page in the iframe
+                iframe.src = destination;
+
+                // Store the current page in localStorage
+                localStorage.setItem('lastVisitedPage', destination);
+            }
+
+            // Function to handle custom link clicks
+            function handleLinkClick() {
+                const destination = this.getAttribute('data-page');
+                loadPage(destination);
+            }
+
+            // Event listener for custom links
+            pageLinks.forEach(link => {
+                link.addEventListener('click', handleLinkClick);
+            });
+
+            // Check if there's a last visited page and load it into the iframe
+            const lastVisitedPage = localStorage.getItem('lastVisitedPage');
+            if (lastVisitedPage) {
+                loadPage(lastVisitedPage);
+            }
+
+            // Show the modal overlay
+            function showModal() {
+                modalOverlay.style.display = 'flex';
+            }
+
+            // Close the modal overlay
+            function closeModal() {
+                modalOverlay.style.display = 'none';
+            }
+
+            // Event listener for opening the modal
+            closeModalButton.addEventListener('click', closeModal);
+        });
+    </script>
+</body>
+</html>

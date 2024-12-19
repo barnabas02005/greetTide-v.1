@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document|Index2</title>
+</head>
+<body>
+      <section>'Hello, I LOVE JESUS FOREVER'</section>
+      <section>'Hello, I LOVE JESUS FOREVER'</section>
+</body>
+</html>
+
+
+<!--
+
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX-Based Link Navigation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="page1.html">Page 1</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        // Function to load content into the entire page
+        function loadContent(url) {
+            $.ajax({
+                url: url,
+                method: 'GET',
+                success: function (data) {
+                    // Replace the entire page content with the fetched HTML
+                    document.documentElement.innerHTML = data;
+                },
+                error: function (error) {
+                    console.error('Error loading content:', error);
+                }
+            });
+        }
+
+        // Attach click event listeners to navigation links
+        $('nav a').click(function (e) {
+            e.preventDefault();
+            var destination = this.href;
+
+            // Show a loading spinner
+            $('.loader-room').html('<div class="loader"></div>');
+
+            // Delay navigation by 1 second (1000 milliseconds)
+            setTimeout(function () {
+                // Load content using AJAX
+                loadContent(destination);
+
+                // Change the URL without a full page refresh
+                history.pushState(null, null, destination);
+            }, 1000);
+        });
+
+        // Handle back and forward button clicks
+        window.addEventListener('popstate', function (event) {
+            if (event.state) {
+                // Load content for the previous URL using AJAX
+                loadContent(event.state.url);
+            }
+        });
+    </script>
+</body>
+</html>
+
+-->

@@ -1,0 +1,60 @@
+<!-- JESUS IS LORD FOREVER -->
+<!DOCTYPE html>
+<html>
+<!-- JESUS IS LORD FOREVER HALLELUJAH -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JESUS IS LORD FOREVER</title>
+    <link rel="shortcut icon" href="assets/img/9.png" type="image/x-icon">
+  <style>
+    body {background: linear-gradient(to right, #444, #222);color:#FFF;}
+    .ulist {display: flex;justify-content: space-evenly;align-items: center;padding: 20px;background:linear-gradient(45deg, #888, #333);width: 80%;border-radius: 10px;border: 2px solid #444;font-size: 1.2rem;font-family: sans-serif;gap: 30px;list-style: none;font-weight: 600;color: rgba(239 239 239);
+    }
+    li { cursor: pointer; }
+    iframe {
+      height: 100vh;
+      width: 100vw;
+      position: absolute;
+      top: 0;
+    }
+  </style>
+  
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="emerald-active">
+    <ul class="ulist">
+        <li class="link" page-name="https://www.google.com/webhp?igu=1">Home</li>
+        <li class="link" page-name="pages/signin.php">Images</li>
+        <li class="link" page-name="GOD'SGLORY.html">Glory</li>
+				<br><br>
+    </ul>
+		<li onclick="newDoc()">My life is to your glory, Beloved Father</li>
+    <div>
+        <h1>HOMEPAGE</h1>
+				<!-- <iframe src="https://www.google.com/webhp?igu=1" width="600" height="400" frameborder="0"></iframe> -->
+        <a href="GOD'SGLORY.html">Google</a>
+
+    </div>
+		<script src="emerald-load.js"></script> 
+<script>
+          $('a').click(function(e) {
+            e.preventDefault();
+            var destination = this.href;
+            setTimeout(function() {
+            window.location = destination;
+        },1000);
+        $('<iframe>').hide().appendTo('body').load(function()
+        {
+            window.location = destination;
+            var load = document.getElementById("loader");
+            $('.loader-room').html('<div class="loader"></div>'); // do your UI thing here
+        }).attr('src', destination);
+        $(function() {
+
+  });
+        });
+</script>
+</body>
+</html>

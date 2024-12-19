@@ -1,0 +1,345 @@
+*{
+		color: grey;
+}
+body {
+		background: white;
+		color: #333;
+}
+
+iframe {
+		background: white;
+		color: grey;
+}
+
+.splash_screen {
+		background: white;
+}
+
+.container_wrapper {
+		background: white;
+}
+
+.container_wrapper .container_header {
+		background: white;
+		/* border-bottom: 1px solid rgba(248 248 248); */
+}
+
+.container_header .up {
+	border-bottom: 1px solid rgba(239 239 239);
+}
+
+.container_header.is-visible {
+	background: white;
+}
+
+.container_header .right .icon {
+		background: rgba(249 249 249);
+}
+.container_header .right ul li.more_menu {
+	background-color: rgba(248, 248, 248);
+	border: 1px solid #eee;
+}
+
+.CH_right_icon svg {
+		stroke: darkgray;
+}
+
+.noti_count p {
+		color: white;
+}
+
+.container_wrapper .container_body {
+		background: white;
+}
+
+.feed_suggestion {
+		background: rgba(255, 255, 255, .10);
+		backdrop-filter: blur(40px);
+}
+
+
+.FD_bar ul li {
+		background: rgba(239 239 239);
+}
+
+.FD_bar ul li p {
+		color: darkgrey;
+}
+
+.FD_bar ul li.active {
+		background: var(--gradient-color);
+}
+
+.FD_bar ul li.active p{
+		color: white;
+}
+
+
+.container_wrapper .container_body .content .post_container {
+		background-color: rgba(248 248 248);
+		border: 1px solid rgba(239 239 239);
+}
+
+.post_container .PC_head {
+		background: white;
+}
+
+.follow_btn button {
+		background: linear-gradient(64deg, #eeeeee, #eee, rgba(239 239 239));
+}
+
+.follow_btn button.following_already {
+		background: transparent;
+}
+
+.PC_head_left .member_avatar {
+		background: rgba(239 239 239);
+}
+
+.card_name_mem .card_name {
+		/* background: rgba(239 239 239); */
+}
+
+.card_name p {
+		color: #444;
+}
+
+.card_name_mem .mem_displayname {
+		/* background: rgba(239 239 239); */
+}
+
+.mem_displayname p {
+		color: #999;
+}
+
+.subscribed_txt span {
+	color: #f55674;
+}
+
+.post_container .PC_footer {
+		background: white;
+}
+
+.PC_footer_left .like_comment {
+		background: rgba(239 239 239);
+}
+
+.like_comment .post_actions {
+		background: rgba(255, 255, 255, .30);
+}
+
+.like_comment .post_actions .PA_icon svg {
+		stroke: #666;
+}
+
+.like_comment .post_actions .checked svg {
+		stroke: url(#grad);
+		fill: url(#grad);
+}
+
+.PC_footer_right .right_side_divider {
+		border-right: 3px solid rgba(239 239 239);
+}
+
+.PC_footer_right .post_actions {
+		/* background: rgba(239 239 239); */
+}
+
+.use_design button.buy_design  {
+		background: linear-gradient(244deg, white 56%, rgb(242, 112, 156) 57%, rgb(255, 148, 114) 104%);border: 1px solid rgba(239 239 239);
+}
+.use_design button.buy_design p{
+		color: #666;
+}
+.PC_footer_right .post_actions .PA_icon {
+	background: rgba(239 239 239);
+}
+
+.PC_footer_right .post_actions .PA_icon svg {
+		stroke: #666;
+}
+
+.BT_icon svg {
+		stroke: darkgrey;
+}
+
+.BT_icon_text p {
+		color: darkgrey;
+}
+
+.PCFD_tags ul li {
+	background: rgba(239 239 239);
+}
+.PCFD_tags ul li p {
+	color: #999;
+}
+
+/* Comment */
+.commentbsheet.up .comment_title_txt {
+	border-bottom: 1px solid #dddd;
+}
+.comment_title_txt p {
+	color: #444;
+}
+.comment_timespan span {
+	color: #999;
+}
+.right_comment_card .member_txt_details .displayname span {
+	color: #444;
+}
+.comment_body .content .txt_comment {
+	color: dimgrey;
+}
+
+/* BottomTab */
+.container_bottomtab {
+		background: white;
+		border-top: 2px solid rgba(239 239 239);
+}
+
+
+/*bottomsheet*/
+.go_app_event .gae_bottomsheet {
+		background: linear-gradient(64deg, #ddd, #eee,#fff, #fff);
+}
+
+.go_app_event.commentSheet .gae_bottomsheet {
+	background: #FFF;
+}
+.overlay_bottomsheet {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.gae_bottomsheet .head .gae_H_bar {
+		background-color: rgba(239 239 239);
+}
+
+.gae_B_body ul li {
+		background: linear-gradient(64deg, #eee,#fff, #fff);
+		border-bottom: 1px solid rgba(239 239 239);
+}
+
+.gae_B_body ul li .gae_icon {
+		/* background: rgba(255, 255, 255, .20);
+		box-shadow: 0px 3px 30px rgba(8 8 8 / 3%);
+		border: 2px solid rgba(255, 255, 255, .30); */
+}
+
+.gae_icon .svg svg {
+		stroke: #444;
+}
+.gae_icon .cardvg svg {
+		/* fill: gray; */
+}
+
+.gae_icon .live svg g {
+		/* fill: grey; */
+}
+
+.gae_text p {
+	color: #444;
+}
+
+.gae_B_head .gae_B_H_text
+{
+		background: #222;
+}
+
+/* more menu */
+.mm_content {
+  background: white;
+}
+.mmch_left .mmchl_back_btn {
+  background: rgba(249, 249, 249);
+  border: 1px solid #ddd;
+}
+.mmchl_back_btn svg {
+  stroke: lightgray;
+}
+.mm_search-box input {
+	background: rgba(248, 248, 248);
+	color: lightgray;
+}
+/* shift right placeholder in focus */
+.mm_search-box input::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.3s ease; color: lightgrey}
+.mm_search-box input::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.3s ease; color: lightgrey}
+.mm_search-box input:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.3s ease; color: lightgrey}
+.mm_search-box input:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.3s ease; color: lightgrey}
+.mm_search-box input::placeholder {
+	color: lightgrey;
+}
+.mmc_content .mmc_content_head {
+	border-bottom: 1px solid rgba(248, 248, 248);
+}
+.mm_search_icon svg {
+	stroke: lightgrey;
+}
+@media(min-width: 600px) {
+		.container_body .content {
+					background: rgba(248, 248, 248);
+		}
+}
+@media(min-width: 1200px)
+{
+		.container_bottomtab {
+					border-right: 1px solid rgba(248 248 248);
+					border-top: none;
+		}
+		.container_bottomtab ul li:hover {
+					background-color: #FFFFFF;
+		}
+		.go_app_event {
+					background: rgba(248 248 248);
+					border-right: 1px solid #eee;
+		}
+		.go_app_event .gae_bottomsheet {
+					background: transparent;
+		}
+}
+
+
+/* search page */
+.first_sec {
+		background: linear-gradient(45deg, rgba(255, 255, 255), rgb(242, 112, 156, 0.23));
+		animation: animebg 6s linear infinite;
+}
+@keyframes animebg {
+		0%,20% {
+					background: linear-gradient(45deg, rgba(255, 255, 255), rgb(242, 112, 156, 0.13), rgb(239, 239, 239));
+					background-position: 0% 0%;
+		}
+		25%, 75% {
+					background: linear-gradient(-45deg, rgba(255, 255, 255), rgb(242, 112, 156, 0.23), rgb(239, 239, 239));
+					background-position: 100% 100%;
+		}
+		100%{
+					background: linear-gradient(45deg, rgba(255, 255, 255),rgb(255, 148, 114, 0.23), rgb(239, 239, 239));
+					background-position: 0% 0%;
+		}
+}
+.FSH_first .page_FSHF_title {
+		background: rgba(255, 255, 255, .50);
+}
+.FSH_first .page_FSHF_icon {
+		background: rgba(255, 255, 255, .50);
+}
+.FSH_second .FSHS_icon {
+		background: rgb(242, 112, 156);
+}
+.FSHS_searchBox input {
+		background: rgba(255, 255, 255, .80);
+		border: 1px solid rgb(242, 112, 156);
+}
+
+.FS_body ul li {
+		background: linear-gradient(-345deg, rgba(255, 255, 255, .30), rgba(0,0,0,0.07));
+}
+.FS_body ul li .ava_display {
+		background: rgba(0, 0, 0, 0.08);
+}
+.fullname_display_name .name {
+		background: rgba(0, 0, 0, 0.08);
+}
+.fullname_display_name .display_name {
+		background: rgba(0, 0, 0, 0.08);
+}

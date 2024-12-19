@@ -1,0 +1,440 @@
+.language_modal {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  display: none;
+  top: 0;
+  left: 0;
+  }
+  
+  .language_modal.active {
+  display: flex;
+  }
+  
+  .language_modal .LM_content {
+  height: 100%;
+  width: 100%;
+  background: #FFFFFF;
+  overflow: hidden;
+  }
+  
+  .LM_content .LMC_head {
+  height: auto;
+  padding: 20px 15px;
+  /* background: green; */
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .LMC_head .modal_title {
+  height: auto;
+  width: 60%;
+  /* background: red; */
+  padding: 12px 10px;
+  }
+  
+  .modal_title .skeleton-loader {
+  border-radius: 20px;
+  height: auto;
+  width: 80%;
+  padding: 12px 0px;
+  background: rgba(239 239 239);
+  }
+  
+  .modal_title .MT_text {
+  height: auto;
+  width: 100%;
+  }
+  
+  .MT_text p {
+  font-size: 1.2rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: 600;
+  color: #333;
+  }
+  
+  .LMC_head .close_btn {
+  height: auto;
+  width: 40%;
+  position: relative;
+  /* background: red; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  }
+  
+  .LMC_head .close_btn .skeleton-loader {
+  padding: 20px;
+  height: auto;
+  width: 30%;
+  background: rgba(239 239 239);
+  border-radius: 50%;
+  }
+  
+  .LMC_head .close_btn .CB_svg {
+  padding: 20px;
+  height: auto;
+  width: 30%;
+  /* background: rgba(239 239 239); */
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  }
+  
+  .CB_svg svg {
+  height: 90%;
+  width: 90%;
+  stroke: #333;
+  stroke-width: 2;
+  position: absolute;
+  }
+  
+  .LM_content .LMC_body {
+  /* background: green; */
+  height: 100%;
+  width: 100%;
+  padding: 20px 15px;
+  /* overflow-y: scroll; */
+  }
+  
+  .LMC_body .LMCB_up {
+  height: auto;
+  width: 100%;
+  /* background: red; */
+  display: flex;
+  }
+  
+  .LMCB_up .left {
+  height: auto;
+  width: 80%;
+  /* background: orange; */
+  }
+  
+  .LMCB_up .left .skeleton-loader {
+  padding: 18px;
+  width: 100%;
+  background: rgba(239 239 239);
+  border-radius: 16px;
+  }
+  
+  .LMCB_up .left form {
+  height: auto;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  }
+  
+  .LMCB_up .left form .svg_search {
+  padding: 10px;
+  height: auto;
+  width: 30%;
+  max-width: 80px;
+  position: absolute;
+  pointer-events: none;
+  }
+  
+  .svg_search svg  {
+  height: 40%;
+  width: 40%;
+  stroke: darkgrey;
+  stroke-width: 2;
+  }
+  
+  .LMCB_up .left form input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  padding: 15px 15px 15px 45px;
+  color: darkgrey;
+  font-weight: 500;
+  background: rgba(239 239 239);
+  border-radius: 16px;
+  }
+  
+  .LMCB_up .left form input::placeholder {
+  color: darkgray;
+  }
+  
+  .LMCB_up .right {
+  height: auto;
+  width: 20%;
+  /* background: orangered; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .LMCB_up .right .skeleton-loader {
+  height: auto;
+  width: 30%;
+  padding: 18px;
+  background: rgba(239 239 239);
+  border-radius: 50%;
+  }
+  
+  .LMCB_up .right .icon {
+  height: auto;
+  width: 30%;
+  padding: 18px;
+  background: rgba(239 239 239);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  }
+  
+  .LMCB_up .right .filter_list svg{
+  height: 70%;
+  width: 70%;
+  stroke: darkgrey;
+  stroke-width: 2;
+  position: absolute;
+  }
+  
+  .LMC_body .LMCB_down {
+  height: 90%;
+  width: 100%;
+  /* background: green; */
+  padding: 20px 0px;
+  }
+  
+  .LMCB_down ul {
+  height: 100%;
+  width: 100%;
+  background: rgba(254, 254, 254);
+  box-shadow: 0px 7px 49px rgba(0 0 0 / 20%);
+  overflow-y: scroll;
+  padding: 30px 0px 60px 0px;
+  border-radius: 22px;
+  }
+  
+  .LMCB_down ul::-webkit-scrollbar {
+  display: none;
+  }
+  
+  .LMCB_down ul li {
+  height: auto;
+  padding: 8px;
+  width: 100%;
+  background: transparent;
+  /* border-bottom: 1px solid rgba(239 239 239); */
+  display: flex;
+  border-top: 1px solid rgba(239 239 239);
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  }
+  
+  .LMCB_down ul li:hover {
+  box-shadow: 0px 8px 30px rgba(8 8 8 / 20%);
+  transform: scale(1.03);
+  }
+  
+  .LMCB_down ul li:nth-child(1)
+  {
+  border-bottom: none;
+  }
+  
+  .LMCB_down ul li .left {
+  height: auto;
+  width: 20%;
+  /* background: cornflowerblue; */
+  }
+  
+  .LMCB_down ul li .left .skeleton-loader {
+  padding: 18px;
+  width: 90%;
+  background: rgba(239 239 239);
+  border-radius: 8px;
+  }
+  
+  .LMCB_down ul li .left .icon {
+  padding: 24px;
+  width: 90%;
+  /* background: rgba(239 239 239); */
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .LMCB_down ul li .left .icon svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  }
+  
+  .LMCB_down ul li .right {
+  width: 80%;
+  height: auto;
+  /* background: yellow; */
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .LMCB_down ul li .right .language_name {
+  width: 100%;
+  height: auto;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  }
+  
+  .language_name .skeleton-loader {
+  display: flex;
+  padding: 9px;
+  width: 70%;
+  background: rgba(239 239 239);
+  border-radius: 16px;
+  }
+  
+  .language_name p  {
+  width: auto;
+  height: auto;
+  font-family: 'Poppins', sans-serif;
+  /* background: mediumvioletred; */
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: #444;
+  }
+  
+  .LMCB_down ul li .right .short_language_name {
+  width: 20%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .short_language_name p {
+  font-family: 'Poppins', comic sans MS;
+  font-size: 1.03rem;
+  color: lightgrey;
+  font-weight: 400;
+  }
+  
+@media(max-width: 290px)
+{
+  .language_name p {
+    font-size: 0.9rem !important;
+  }
+
+  .LMCB_down ul li .left .icon {
+    padding: 20px !important;
+  }
+  .short_language_name p {
+    font-family: 'Poppins', comic sans MS;
+    font-size: 0.76rem !important;
+  }
+}
+
+@media(max-width: 330px)
+{
+}
+
+@media (max-width: 660px) and (orientation: landscape) {
+  .language_modal .LM_content {
+    height: 100% !important;
+    width: 100% !important;
+    background: #FFFFFF;
+    border-radius: 0px;
+  }
+  .LMC_head .close_btn .CB_svg {
+    background: transparent;
+  }
+}
+
+@media (min-width: 400px) and  (orientation: portrait)
+{
+
+}
+
+@media (min-width: 400px) and (orientation: landscape)
+{
+}
+
+
+@media (min-width: 480px) {
+}
+
+@media (min-width: 600px) {
+  .language_modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .language_modal .LM_content {
+      height: 60%;
+      width: 400px;
+      border-radius: 16px;
+      /* max-height: 80%; */
+      /* min-height: 60%; */
+  }
+  .LMC_head .close_btn .CB_svg {
+    background: rgba(239 239 239);
+  }
+}
+
+@media (min-width: 768px)
+{
+}
+
+@media (max-width: 992px) and (orientation: landscape)
+{
+	.language_modal .LM_content {
+		height: 95%;
+		width: 65%;
+		overflow-y: scroll;
+	}
+	.language_modal .LM_content::-webkit-scrollbar {
+		display: none;
+	}
+	.LMCB_down ul {
+		height: auto;
+		overflow-y: hidden;
+	}
+	.LMC_head .close_btn .CB_svg {
+		padding: 18px;
+		width: 16%;
+	}
+	.CB_svg svg {
+		height: 70%;
+		width: 70%;
+	}
+}
+
+@media (min-width: 992px)
+{
+  .language_modal .LM_content {
+    height: 80%;
+  }
+}
+
+@media (min-width: 1200px)
+{
+		
+}
+
+
+@media (min-height: 1024px)
+{
+}
+
+/*1493*/
+@media (min-width: 1380px)
+{
+  .language_modal .LM_content {
+    height: 60%;
+  }
+}

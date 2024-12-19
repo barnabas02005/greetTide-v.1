@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image|Optimize|Blob-Solution</title>
+</head>
+<body style="display: flex; align-items: center;justify-content: center;">
+  <img src="_164187-removebg-preview.png" alt="logo_test_image_ALL THANKS TO THE FATHER">
+  <img src="_164187__1_-removebg-preview.png" alt="logo_test_image_ALL THANKS TO THE FATHER">
+  <br>
+  <br>
+  <img src="greetislandlogo.png">
+</body>
+</html> -->
+<script>
+  // Create doctype node
+// const docTypeNode = document.implementation.createDocumentType('html', '', '');
+
+// Create HTML element
+// Create HTML element
+const htmlElement = document.createElement('html');
+
+// Create head element
+const headElement = document.createElement('head');
+
+// Create meta elements
+const metaCharset = document.createElement('meta');
+metaCharset.setAttribute('charset', 'UTF-8');
+const metaViewport = document.createElement('meta');
+metaViewport.setAttribute('name', 'viewport');
+metaViewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+
+// Create title element
+const titleElement = document.createElement('title');
+titleElement.textContent = 'Dynamic Webpage';
+
+// Append meta and title elements to head
+headElement.appendChild(metaCharset);
+headElement.appendChild(metaViewport);
+headElement.appendChild(titleElement);
+
+// Create body element
+const bodyElement = document.createElement('body');
+
+// Create section element
+const sectionElement = document.createElement('section');
+
+// Create article element
+const articleElement = document.createElement('article');
+
+// Create heading element
+const headingElement = document.createElement('h1');
+headingElement.textContent = 'Welcome to My Website';
+
+// Create paragraph element
+const paragraphElement = document.createElement('p');
+paragraphElement.textContent = 'This is a basic webpage created dynamically using JavaScript DOM manipulation.';
+
+// Create image element
+const imageElement = document.createElement('img');
+imageElement.setAttribute('src', 'https://via.placeholder.com/150'); // Placeholder image URL
+
+// Append heading, paragraph, and image elements to article
+articleElement.appendChild(headingElement);
+articleElement.appendChild(paragraphElement);
+articleElement.appendChild(imageElement);
+
+// Append article to section
+sectionElement.appendChild(articleElement);
+
+// Append section to body
+bodyElement.appendChild(sectionElement);
+
+// Append head and body to HTML
+htmlElement.appendChild(headElement);
+htmlElement.appendChild(bodyElement);
+
+// Append HTML to document body
+document.body.appendChild(htmlElement);
+
+</script>

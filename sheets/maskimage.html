@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mask Image</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100%;
+    }
+    #load {
+      width: 100%;
+      height: 100vh;
+      background-color: #20173E;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+      overflow: hidden;
+    }
+    #load::before {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      content: '';
+      background-image: linear-gradient(to bottom right, #B914D4, #D7B868);
+      border-radius: 50%;
+      top: calc(50% - 150px);
+      left: calc(50% - 150px);
+      filter: blur(100px);
+      opacity: 0.8;
+    }
+    #load .item {
+      border: 1px solid #25E2BC;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(50% - 50px);
+      left: calc(50% - 50px);
+      --i: 0s;
+      opacity: 0;
+      animation: animationLoad 3s var(--i) linear infinite;
+    }
+    #load .item::before {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #25E2BC;
+      content: '';
+      border-radius: 50%;
+    }
+
+    @keyframes animationLoad {
+      0% {
+        transform: rotate(0) scale(3);
+        opacity: 0;
+        filter: blur(3px);
+      }
+      50%{
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: rotate(360deg) scale(0.5);
+        filter: blur(0);
+      }
+    }
+
+    .imgs {
+        width: 100%;
+        columns: 6;
+        height: auto;
+        /* overflow: hidden; */
+        column-gap: 18px;
+        position: relative;
+        padding: 20px 30px;
+    }
+    .imgs .imger {
+      /* width: 300px; */
+      /* height: 300px; */
+      margin-bottom: 20px;
+    }
+    .imger img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 
+      0px 3px 11px 9px rgba(0 0 0 / 12%),
+      2px 3px 16px 2px rgba(8 8 8 / 10%),
+      1px 0px 5px 0px rgba(45 46 302 / 10%);
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="load">
+  </div>
+
+  <div class="imgs">
+    <div class="overflowing_overlay"></div>
+    <div class="allimg">
+      <div class="imger">
+        <img src="../assets/img/33.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/1.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/4.jpg" alt="">
+      </div>
+      <div class="imger"><img src="../assets/img/9.png" alt=""></div>
+      <div class="imger"><img src="../assets/img/card2.jpeg" alt="" ></div>
+      <div class="imger"><img src="../assets/img/card22.png" alt=""></div>
+      <div class="imger"><img src="../assets/img/63d4f983a3c72.jpg" alt="" ></div>
+      <div class="imger">
+        <img src="../assets/img/bg1.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/anime5.gif" alt="" height="400px" width="400px">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/anime4.png" alt="" >
+      </div>
+      <div class="imger">
+        <img src="../assets/img/card1.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/bg2.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/card3.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/EcardExT2.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/87e789b6-db7a-49e4-b605-0a6b149aa488.jpeg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/redbg.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/Untitled design (9).png" alt="" >
+      </div>
+      <div class="imger">
+        <img src="../assets/img/logo/greetide_icon_no_shadow.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/pro_pic.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/gift.gif" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/EcardExT2.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/creative_bg.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/creative_2.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/LiveInTheMoment.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/planning_1.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/wall2.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/loginBg/online_presence_2.jpg" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/f.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/Hold unto me.png" alt="">
+      </div>
+      <div class="imger">
+        <img src="../assets/img/boy.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <script>
+    let load = document.getElementById('load');
+    let imgTag = document.querySelectorAll('img');
+    let countDot = 20;
+
+    for(i = 0; i < imgTag.length; i++)
+    {
+      imgTag[i].style.display = 'none';
+    }
+    for(let i = 0; i < countDot; i++)
+    {
+        let newElement = document.createElement('div');
+        newElement.classList.add('item');
+        newElement.style.setProperty('--i', `${(0.2 * i)}s`);
+        load.append(newElement);
+    }
+
+    window.onload = function()
+    {
+      load.remove();
+      for(i = 0; i < imgTag.length; i++)
+      {
+        imgTag[i].style.opacity = '1';
+        imgTag[i].style.display = '';
+        imgTag[i].style.cursor = 'pointer';
+      }
+    }
+  </script>
+</body>
+</html>

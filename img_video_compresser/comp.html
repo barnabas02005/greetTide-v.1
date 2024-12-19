@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image and Video Compressor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    input {
+      margin: 10px;
+    }
+
+    #output {
+      margin-top: 20px;
+    }
+  </style>
+  <!-- Load FFmpeg script asynchronously -->
+  <script async src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg" onload="onFFmpegLoad()"></script>
+</head>
+<body>
+  <h1>Image and Video Compressor</h1>
+
+  <input type="file" id="fileInput" accept="image/*, video/*" multiple>
+  <br>
+  <button onclick="compressFiles()">Compress Files</button>
+
+  <div id="output"></div>
+
+  <script>
+    // Function to be called when FFmpeg script is loaded
+    function onFFmpegLoad() {
+      // Ensure FFmpeg is available on the window object
+      window.FFmpeg = FFmpeg;
+    }
+
+    async function compressFiles() {
+      const fileInput = document.getElementById('fileInput');
+      const outputDiv = document.getElementById('output');
+      
+      outputDiv.innerHTML = ''; // Clear previous results
+
+      for (const file of fileInput.files) {
+        const fileName = file.name;
+        const fileSize = (file.size / (1024 * 1024)).toFixed(2); // Convert to MB
+
+        const resultDiv = document.createElement('div');
+        resultDiv.textContent = `Original File: ${fileName} - Size: ${fileSize} MB`;
+
+        outputDiv.appendChild(resultDiv);
+
+        if (file.type.includes('image')) {
+          await compressImage(file);
+        } else if (file.type.includes('video')) {
+          await compressVideo(file);
+        }
+      }
+    }
+
+    async function compressImage(file) {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function () {
+        const img = new Image();
+        img.src = reader.result;
+
+        img.onload = function () {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 300; // Set your desired width
+          canvas.height = (300 / img.width) * img.height; // Maintain aspect ratio
+
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+          const compressedDataURL = canvas.toDataURL('image/jpeg', 0.7); // Adjust quality as needed
+
+          // Download the compressed image
+          downloadFile(compressedDataURL, `compressed_${file.name}.jpg`);
+        };
+      };
+    }
+
+    async function compressVideo(file) {
+      // Ensure FFmpeg is loaded before using it
+      await loadFFmpeg();
+
+      const { createFFmpeg, fetchFile } = window.FFmpeg;
+      const ffmpeg = createFFmpeg({ log: true });
+
+      // Load FFmpeg
+      await ffmpeg.load();
+
+      // Read the input video file
+      const inputFileName = file.name;
+      const inputData = await fetchFile(file);
+      ffmpeg.FS('writeFile', inputFileName, inputData);
+
+      // Run FFmpeg commands to compress the video
+      const outputFileName = `compressed_${inputFileName}`;
+      await ffmpeg.run('-i', inputFileName, '-c:v', 'libx264', '-b:v', '1M', '-c:a', 'aac', '-strict', 'experimental', outputFileName);
+
+      // Read the compressed video file
+      const compressedData = ffmpeg.FS('readFile', outputFileName);
+
+      // Create a Blob from the compressed data
+      const compressedBlob = new Blob([compressedData.buffer], { type: 'video/mp4' });
+
+      // Download the compressed video
+      downloadFile(URL.createObjectURL(compressedBlob), outputFileName);
+
+      // Display result
+      const compressedSize = (compressedBlob.size / (1024 * 1024)).toFixed(2);
+      const resultDiv = document.createElement('div');
+      resultDiv.textContent = `Compressed Video: ${outputFileName} - Size: ${compressedSize} MB`;
+      document.getElementById('output').appendChild(resultDiv);
+    }
+
+    function downloadFile(data, fileName) {
+      const a = document.createElement('a');
+      a.href = data;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    // Updated function to load FFmpeg
+    function loadFFmpeg() {
+      return new Promise((resolve) => {
+        if (typeof window.FFmpeg !== 'undefined') {
+          resolve();
+        } else {
+          // Retry loading after a short delay
+          setTimeout(() => {
+            loadFFmpeg();
+          }, 100);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
